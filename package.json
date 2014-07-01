@@ -1,6 +1,6 @@
 {
   "name": "ainojs-react-touchclick",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Component for optimizing touch clicks",
   "repository": {
     "type": "git",
@@ -20,6 +20,5 @@
     "envify": "^1.2.1",
     "react": "latest"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
