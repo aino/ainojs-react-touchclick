@@ -1,5 +1,7 @@
 var React = require('react')
 
+React.initializeTouchEvents(true)
+
 module.exports = React.createClass({
 
   propTypes: {
@@ -12,15 +14,13 @@ module.exports = React.createClass({
 
   timer: null,
 
-  defaults: {
-    touched: false,
-    touchdown: false,
-    coords: { x:0, y:0 },
-    evObj: {}
-  },
-
   getInitialState: function() {
-    return this.defaults
+    return {
+      touched: false,
+      touchdown: false,
+      coords: { x:0, y:0 },
+      evObj: {}
+    }
   },
 
   trigger: function(type, ev) {
@@ -70,13 +70,13 @@ module.exports = React.createClass({
         e.target.focus()
 
       // allow button submit
-      if ( e.target.nodeName == 'BUTTON' && e.target.type == 'submit' )
+      if ( e.target.form && e.target.nodeName == 'BUTTON' && e.target.type == 'submit' )
         e.target.form.submit()
       
     }
     this.timer = setTimeout(function() {
       if ( this.isMounted() )
-        this.setState(this.defaults)
+        this.setState(this.getInitialState())
     }.bind(this), 400)
   },
 
@@ -90,7 +90,7 @@ module.exports = React.createClass({
   on: function(type, fn) {
     var d = document
     if ( d.addEventListener )
-      return d.addEventListener(type, fn)
+      return d.addEventListener(type, fn, false)
     else if ( d.attachEvent )
       return d.attachEvent('on'+type, fn)
   },
@@ -98,7 +98,7 @@ module.exports = React.createClass({
   off: function(type, fn) {
     var d = document
     if ( d.removeEventListener )
-      return d.removeEventListener(type, fn)
+      return d.removeEventListener(type, fn, false)
     else if ( d.detachEvent )
       return d.detachEvent('on'+type, fn)
   },
@@ -107,7 +107,6 @@ module.exports = React.createClass({
     if( this.state.touched )
       return false
     this.trigger('down', e)
-    var forget = function(){}
     var c = {}
     for( var i in e )
       c[i] = e[i]
@@ -115,10 +114,6 @@ module.exports = React.createClass({
     var onMouseUp = function(m) {
       c.type = 'mouseup'
       this.trigger('up', c)
-      forget()
-    }.bind(this)
-
-    forget = function() {
       this.off('dragend', onMouseUp)
       this.off('mouseup', onMouseUp)
       this.off('contextmenu', onMouseUp)
