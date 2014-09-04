@@ -13,13 +13,15 @@ module.exports = React.createClass({
   },
 
   timer: null,
+  clickTimer: null,
 
   getInitialState: function() {
     return {
       touched: false,
       touchdown: false,
       coords: { x:0, y:0 },
-      evObj: {}
+      evObj: {},
+      canClick: false
     }
   },
 
@@ -35,6 +37,14 @@ module.exports = React.createClass({
         y: touch.pageY
       }
     }
+  },
+
+  componentDidMount: function() {
+    // delay the click listener to clear leftovers in the event bus
+    this.clickTimer && clearTimeout(this.clickTimer)
+    this.clickTimer = setTimeout(function() {
+      this.setState({canClick: true})
+    }.bind(this), 400)
   },
 
   onTouchStart: function(e) {
@@ -81,10 +91,10 @@ module.exports = React.createClass({
   },
 
   onClick: function(e) {
-    if ( this.state.touched )
+    if ( this.state.touched || !this.state.canClick )
       return false
-    this.setState(this.defaults)
     this.trigger('click', e)
+    this.setState(this.getInitialState())
   },
 
   on: function(type, fn) {
