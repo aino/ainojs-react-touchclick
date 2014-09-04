@@ -114,7 +114,7 @@ module.exports = React.createClass({
   },
 
   onMouseDown: function(e) {
-    if( this.state.touched )
+    if( this.state.touched || !this.state.canClick )
       return false
     this.trigger('down', e)
     var c = {}
