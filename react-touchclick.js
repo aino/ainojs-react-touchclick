@@ -65,7 +65,7 @@ module.exports = React.createClass({
       Math.abs(this.state.coords.y - coords.y) 
     )
     if ( distance > 6 ) {
-      this.state.touchdown && this.trigger('up', e)
+      this.state.touchdown && this.trigger('cancel', e)
       this.setState({ touchdown: false })
     }
   },
