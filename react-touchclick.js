@@ -41,6 +41,7 @@ module.exports = React.createClass({
 
   componentDidMount: function() {
     // delay the click listener to clear leftovers in the event bus
+    this.setState({canClick: false})
     this.clickTimer && clearTimeout(this.clickTimer)
     this.clickTimer = setTimeout(function() {
       this.setState({canClick: true})
