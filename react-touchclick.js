@@ -20,8 +20,7 @@ module.exports = React.createClass({
       touched: false,
       touchdown: false,
       coords: { x:0, y:0 },
-      evObj: {},
-      canClick: false
+      evObj: {}
     }
   },
 
