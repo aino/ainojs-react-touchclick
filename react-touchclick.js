@@ -43,7 +43,7 @@ module.exports = React.createClass({
     this.setState({canClick: false})
     this.clickTimer && clearTimeout(this.clickTimer)
     this.clickTimer = setTimeout(function() {
-      this.setState({canClick: true})
+      this.isMounted() && this.setState({canClick: true})
     }.bind(this), 400)
   },
 
