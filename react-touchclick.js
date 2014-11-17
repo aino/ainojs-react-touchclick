@@ -9,7 +9,7 @@ module.exports = React.createClass({
     up: React.PropTypes.func,
     down: React.PropTypes.func,
     nodeName: React.PropTypes.string,
-    className: React.PropTypes.string
+    className = Rect.PropTypes.string 
   },
 
   timer: null,
@@ -136,14 +136,14 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    return this.transferPropsTo(
-      React.DOM[this.props.nodeName || 'div']({
-        onTouchStart: this.onTouchStart,
-        onTouchMove: this.onTouchMove,
-        onTouchEnd: this.onTouchEnd,
-        onClick: this.onClick,
-        onMouseDown: this.onMouseDown
-      }, this.props.children)
+    return React.DOM[this.props.nodeName || 'div']({
+      onTouchStart: this.onTouchStart,
+      onTouchMove: this.onTouchMove,
+      onTouchEnd: this.onTouchEnd,
+      onClick: this.onClick,
+      onMouseDown: this.onMouseDown,
+      className: this.props.className
+      }, this.props.children) 
     )
   }
 })
