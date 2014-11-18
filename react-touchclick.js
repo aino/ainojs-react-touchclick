@@ -1,15 +1,14 @@
 var React = require('react')
 
-React.initializeTouchEvents(true)
-
 module.exports = React.createClass({
 
   propTypes: {
-    click: React.PropTypes.func,
     up: React.PropTypes.func,
     down: React.PropTypes.func,
+    click: React.PropTypes.func,
     nodeName: React.PropTypes.string,
-    className = Rect.PropTypes.string 
+    className: React.PropTypes.string,
+    href: React.PropTypes.string
   },
 
   timer: null,
@@ -26,7 +25,9 @@ module.exports = React.createClass({
   },
 
   trigger: function(type, ev) {
-    typeof this.props[type] == 'function' && this.props[type].call(this, ev)
+    typeof this.props[type] == 'function' && this.props[type].call(this.getDOMNode(), ev)
+    if ( type == 'click' )
+      this.clearEventBus()
   },
 
   getCoords: function(e) {
@@ -39,12 +40,17 @@ module.exports = React.createClass({
     }
   },
 
-  componentDidMount: function() {
-    // delay the click listener to clear leftovers in the event bus
+  clearEventBus: function() {
+    if ( !this.isMounted() )
+      return
     this.clickTimer && clearTimeout(this.clickTimer)
     this.clickTimer = setTimeout(function() {
       this.setState({canClick: true})
     }.bind(this), 400)
+  },
+
+  componentDidMount: function() {
+    this.clearEventBus()
   },
 
   onTouchStart: function(e) {
@@ -91,8 +97,10 @@ module.exports = React.createClass({
   },
 
   onClick: function(e) {
-    if ( this.state.touched || !this.state.canClick )
-      return false
+    if ( this.state.touched || !this.state.canClick ) {
+      e.preventDefault()
+      return
+    }
     this.trigger('click', e)
     this.setState(this.getInitialState())
   },
@@ -114,8 +122,10 @@ module.exports = React.createClass({
   },
 
   onMouseDown: function(e) {
-    if( this.state.touched || !this.state.canClick )
-      return false
+    if( this.state.touched || !this.state.canClick ) {
+      e.preventDefault()
+      return
+    }
     this.trigger('down', e)
     var c = {}
     for( var i in e )
@@ -136,14 +146,16 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    return React.DOM[this.props.nodeName || 'div']({
-      onTouchStart: this.onTouchStart,
-      onTouchMove: this.onTouchMove,
-      onTouchEnd: this.onTouchEnd,
-      onClick: this.onClick,
-      onMouseDown: this.onMouseDown,
-      className: this.props.className
-      }, this.props.children) 
-    )
+
+    var props = {
+      className: this.props.className,
+      href: this.props.href
+    }
+
+    ;['onTouchStart', 'onTouchMove', 'onTouchEnd', 'onClick', 'onMouseDown'].forEach(function(type) {
+      props[type] = this[type]
+    }.bind(this) )
+
+    return React.DOM[this.props.nodeName || 'div']( props, this.props.children ) 
   }
 })

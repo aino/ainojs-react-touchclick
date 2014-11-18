@@ -1,0 +1,129 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/david/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/var/folders/40/hp4zmr0s20db316q78y0nr0w0000gn/T/npm-50011-L-NiEHTG/1416237703862-0.336921788752079/tmp.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball /var/folders/40/hp4zmr0s20db316q78y0nr0w0000gn/T/npm-50011-L-NiEHTG/1416237703862-0.336921788752079/tmp.tgz
+12 verbose folder .
+13 info prepublish ainojs-react-touchclick@1.0.6
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/david/.npm/1f1177db-tar.lock
+16 silly lockFile 0fe03e7b-703862-0-336921788752079-tmp-tgz tar:///var/folders/40/hp4zmr0s20db316q78y0nr0w0000gn/T/npm-50011-L-NiEHTG/1416237703862-0.336921788752079/tmp.tgz
+17 verbose lock tar:///var/folders/40/hp4zmr0s20db316q78y0nr0w0000gn/T/npm-50011-L-NiEHTG/1416237703862-0.336921788752079/tmp.tgz /Users/david/.npm/0fe03e7b-703862-0-336921788752079-tmp-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 0fe03e7b-703862-0-336921788752079-tmp-tgz tar:///var/folders/40/hp4zmr0s20db316q78y0nr0w0000gn/T/npm-50011-L-NiEHTG/1416237703862-0.336921788752079/tmp.tgz
+21 silly lockFile 0fe03e7b-703862-0-336921788752079-tmp-tgz tar:///var/folders/40/hp4zmr0s20db316q78y0nr0w0000gn/T/npm-50011-L-NiEHTG/1416237703862-0.336921788752079/tmp.tgz
+22 verbose tar unpack /var/folders/40/hp4zmr0s20db316q78y0nr0w0000gn/T/npm-50011-L-NiEHTG/1416237703862-0.336921788752079/tmp.tgz
+23 silly lockFile b8596afe-703862-0-336921788752079-package tar:///var/folders/40/hp4zmr0s20db316q78y0nr0w0000gn/T/npm-50011-L-NiEHTG/1416237703862-0.336921788752079/package
+24 verbose lock tar:///var/folders/40/hp4zmr0s20db316q78y0nr0w0000gn/T/npm-50011-L-NiEHTG/1416237703862-0.336921788752079/package /Users/david/.npm/b8596afe-703862-0-336921788752079-package.lock
+25 silly lockFile 0fe03e7b-703862-0-336921788752079-tmp-tgz tar:///var/folders/40/hp4zmr0s20db316q78y0nr0w0000gn/T/npm-50011-L-NiEHTG/1416237703862-0.336921788752079/tmp.tgz
+26 verbose lock tar:///var/folders/40/hp4zmr0s20db316q78y0nr0w0000gn/T/npm-50011-L-NiEHTG/1416237703862-0.336921788752079/tmp.tgz /Users/david/.npm/0fe03e7b-703862-0-336921788752079-tmp-tgz.lock
+27 silly gunzTarPerm modes [ '755', '644' ]
+28 silly gunzTarPerm extractEntry package.json
+29 silly gunzTarPerm extractEntry .npmignore
+30 silly gunzTarPerm extractEntry README.md
+31 silly gunzTarPerm extractEntry react-touchclick.js
+32 silly lockFile b8596afe-703862-0-336921788752079-package tar:///var/folders/40/hp4zmr0s20db316q78y0nr0w0000gn/T/npm-50011-L-NiEHTG/1416237703862-0.336921788752079/package
+33 silly lockFile b8596afe-703862-0-336921788752079-package tar:///var/folders/40/hp4zmr0s20db316q78y0nr0w0000gn/T/npm-50011-L-NiEHTG/1416237703862-0.336921788752079/package
+34 silly lockFile 0fe03e7b-703862-0-336921788752079-tmp-tgz tar:///var/folders/40/hp4zmr0s20db316q78y0nr0w0000gn/T/npm-50011-L-NiEHTG/1416237703862-0.336921788752079/tmp.tgz
+35 silly lockFile 0fe03e7b-703862-0-336921788752079-tmp-tgz tar:///var/folders/40/hp4zmr0s20db316q78y0nr0w0000gn/T/npm-50011-L-NiEHTG/1416237703862-0.336921788752079/tmp.tgz
+36 verbose tar pack [ '/Users/david/.npm/ainojs-react-touchclick/1.0.6/package.tgz',
+36 verbose tar pack   '/var/folders/40/hp4zmr0s20db316q78y0nr0w0000gn/T/npm-50011-L-NiEHTG/1416237703862-0.336921788752079/package' ]
+37 verbose tarball /Users/david/.npm/ainojs-react-touchclick/1.0.6/package.tgz
+38 verbose folder /var/folders/40/hp4zmr0s20db316q78y0nr0w0000gn/T/npm-50011-L-NiEHTG/1416237703862-0.336921788752079/package
+39 silly lockFile b8596afe-703862-0-336921788752079-package tar:///var/folders/40/hp4zmr0s20db316q78y0nr0w0000gn/T/npm-50011-L-NiEHTG/1416237703862-0.336921788752079/package
+40 verbose lock tar:///var/folders/40/hp4zmr0s20db316q78y0nr0w0000gn/T/npm-50011-L-NiEHTG/1416237703862-0.336921788752079/package /Users/david/.npm/b8596afe-703862-0-336921788752079-package.lock
+41 silly lockFile cedc47f2-act-touchclick-1-0-6-package-tgz tar:///Users/david/.npm/ainojs-react-touchclick/1.0.6/package.tgz
+42 verbose lock tar:///Users/david/.npm/ainojs-react-touchclick/1.0.6/package.tgz /Users/david/.npm/cedc47f2-act-touchclick-1-0-6-package-tgz.lock
+43 silly lockFile b8596afe-703862-0-336921788752079-package tar:///var/folders/40/hp4zmr0s20db316q78y0nr0w0000gn/T/npm-50011-L-NiEHTG/1416237703862-0.336921788752079/package
+44 silly lockFile b8596afe-703862-0-336921788752079-package tar:///var/folders/40/hp4zmr0s20db316q78y0nr0w0000gn/T/npm-50011-L-NiEHTG/1416237703862-0.336921788752079/package
+45 silly lockFile cedc47f2-act-touchclick-1-0-6-package-tgz tar:///Users/david/.npm/ainojs-react-touchclick/1.0.6/package.tgz
+46 silly lockFile cedc47f2-act-touchclick-1-0-6-package-tgz tar:///Users/david/.npm/ainojs-react-touchclick/1.0.6/package.tgz
+47 silly lockFile c171214c-s-react-touchclick-1-0-6-package /Users/david/.npm/ainojs-react-touchclick/1.0.6/package
+48 verbose lock /Users/david/.npm/ainojs-react-touchclick/1.0.6/package /Users/david/.npm/c171214c-s-react-touchclick-1-0-6-package.lock
+49 silly lockFile c171214c-s-react-touchclick-1-0-6-package /Users/david/.npm/ainojs-react-touchclick/1.0.6/package
+50 silly lockFile c171214c-s-react-touchclick-1-0-6-package /Users/david/.npm/ainojs-react-touchclick/1.0.6/package
+51 verbose tar unpack /Users/david/.npm/ainojs-react-touchclick/1.0.6/package.tgz
+52 silly lockFile 1d1b3038-s-react-touchclick-1-0-6-package tar:///Users/david/.npm/ainojs-react-touchclick/1.0.6/package
+53 verbose lock tar:///Users/david/.npm/ainojs-react-touchclick/1.0.6/package /Users/david/.npm/1d1b3038-s-react-touchclick-1-0-6-package.lock
+54 silly lockFile cedc47f2-act-touchclick-1-0-6-package-tgz tar:///Users/david/.npm/ainojs-react-touchclick/1.0.6/package.tgz
+55 verbose lock tar:///Users/david/.npm/ainojs-react-touchclick/1.0.6/package.tgz /Users/david/.npm/cedc47f2-act-touchclick-1-0-6-package-tgz.lock
+56 silly gunzTarPerm modes [ '755', '644' ]
+57 silly gunzTarPerm extractEntry package.json
+58 silly gunzTarPerm extractEntry .npmignore
+59 silly gunzTarPerm extractEntry README.md
+60 silly gunzTarPerm extractEntry react-touchclick.js
+61 silly lockFile 1d1b3038-s-react-touchclick-1-0-6-package tar:///Users/david/.npm/ainojs-react-touchclick/1.0.6/package
+62 silly lockFile 1d1b3038-s-react-touchclick-1-0-6-package tar:///Users/david/.npm/ainojs-react-touchclick/1.0.6/package
+63 silly lockFile cedc47f2-act-touchclick-1-0-6-package-tgz tar:///Users/david/.npm/ainojs-react-touchclick/1.0.6/package.tgz
+64 silly lockFile cedc47f2-act-touchclick-1-0-6-package-tgz tar:///Users/david/.npm/ainojs-react-touchclick/1.0.6/package.tgz
+65 verbose chmod /Users/david/.npm/ainojs-react-touchclick/1.0.6/package.tgz 644
+66 verbose chown /Users/david/.npm/ainojs-react-touchclick/1.0.6/package.tgz [ 501, 20 ]
+67 silly lockFile 3a52ce78- .
+68 silly lockFile 3a52ce78- .
+69 silly publish { name: 'ainojs-react-touchclick',
+69 silly publish   version: '1.0.6',
+69 silly publish   description: 'React Component for optimizing touch clicks',
+69 silly publish   repository:
+69 silly publish    { type: 'git',
+69 silly publish      url: 'https://github.com/aino/ainojs-react-touchclick' },
+69 silly publish   license: 'MIT',
+69 silly publish   bugs: { url: 'https://github.com/aino/ainojs-react-touchclick/issues' },
+69 silly publish   homepage: 'https://github.com/aino/ainojs-react-touchclick',
+69 silly publish   main: 'react-touchclick.js',
+69 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+69 silly publish   author: { name: 'Aino' },
+69 silly publish   devDependencies: { envify: '^1.2.1', react: 'latest' },
+69 silly publish   dependencies: {},
+69 silly publish   readme: 'React TouchClick\n----------------\n\nReact Component for optimizing touch clicks.\n\nUsage:\n\n    <TouchClick click={this.onClick} down={this.onMouseDown} up={this.onMouseUp}>\n      [...]\n    </TouchClick>\n\nProps:\n\n- click - click handler\n- down -  touchdown/mousedown handler\n- up - touchend/mouseup handler\n- nodeName - nodeName of the surrounding node (default: DIV)',
+69 silly publish   readmeFilename: 'README.md',
+69 silly publish   _id: 'ainojs-react-touchclick@1.0.6',
+69 silly publish   dist: { shasum: '284fa26c471b01a089a19c6318009f815faf78f4' },
+69 silly publish   _from: '.' }
+70 verbose url raw ainojs-react-touchclick
+71 verbose url resolving [ 'https://registry.npmjs.org/', './ainojs-react-touchclick' ]
+72 verbose url resolved https://registry.npmjs.org/ainojs-react-touchclick
+73 info trying registry request attempt 1 at 16:21:43
+74 http PUT https://registry.npmjs.org/ainojs-react-touchclick
+75 http 403 https://registry.npmjs.org/ainojs-react-touchclick
+76 error publish Failed PUT 403
+77 error Error: forbidden cannot modify pre-existing version: 1.0.6
+77 error old={"name":"ainojs-react-touchclick","version":"1.0.6","description":"React Component for optimizing touch clicks","repository":{"type":"git","url":"https://github.com/aino/ainojs-react-touchclick"},"license":"MIT","bugs":{"url":"https://github.com/aino/ainojs-react-touchclick/issues"},"homepage":"https://github.com/aino/ainojs-react-touchclick","main":"react-touchclick.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"author":{"name":"Aino"},"devDependencies":{"envify":"^1.2.1","react":"latest"},"dependencies":{},"_id":"ainojs-react-touchclick@1.0.6","dist":{"shasum":"936508aaad46622e789b38b9d1837bc1e4b48199","tarball":"http://registry.npmjs.org/ainojs-react-touchclick/-/ainojs-react-touchclick-1.0.6.tgz"},"_from":".","_npmVersion":"1.4.3","_npmUser":{"name":"aino","email":"info@aino.se"},"maintainers":[{"name":"aino","email":"info@aino.se"}]}
+77 error new={"name":"ainojs-react-touchclick","version":"1.0.6","description":"React Component for optimizing touch clicks","repository":{"type":"git","url":"https://github.com/aino/ainojs-react-touchclick"},"license":"MIT","bugs":{"url":"https://github.com/aino/ainojs-react-touchclick/issues"},"homepage":"https://github.com/aino/ainojs-react-touchclick","main":"react-touchclick.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"author":{"name":"Aino"},"devDependencies":{"envify":"^1.2.1","react":"latest"},"dependencies":{},"readme":"React TouchClick\u000a----------------\u000a\u000aReact Component for optimizing touch clicks.\u000a\u000aUsage:\u000a\u000a    <TouchClick click={this.onClick} down={this.onMouseDown} up={this.onMouseUp}>\u000a      [...]\u000a    </TouchClick>\u000a\u000aProps:\u000a\u000a- click - click handler\u000a- down -  touchdown/mousedown handler\u000a- up - touchend/mouseup handler\u000a- nodeName - nodeName of the surrounding node (default: DIV)","readmeFilename":"README.md","_id":"ainojs-react-touchclick@1.0.6","dist":{"shasum":"284fa26c471b01a089a19c6318009f815faf78f4","tarball":"http://registry.npmjs.org/ainojs-react-touchclick/-/ainojs-react-touchclick-1.0.6.tgz"},"_from":".","_npmVersion":"1.4.3","_npmUser":{"name":"aino","email":"info@aino.com"},"maintainers":[{"name":"aino","email":"info@aino.com"}]}: ainojs-react-touchclick
+77 error     at RegClient.<anonymous> (/usr/local/Cellar/node/0.10.12/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:237:14)
+77 error     at Request.self.callback (/usr/local/Cellar/node/0.10.12/lib/node_modules/npm/node_modules/request/request.js:123:22)
+77 error     at Request.EventEmitter.emit (events.js:98:17)
+77 error     at Request.<anonymous> (/usr/local/Cellar/node/0.10.12/lib/node_modules/npm/node_modules/request/request.js:893:14)
+77 error     at Request.EventEmitter.emit (events.js:117:20)
+77 error     at IncomingMessage.<anonymous> (/usr/local/Cellar/node/0.10.12/lib/node_modules/npm/node_modules/request/request.js:844:12)
+77 error     at IncomingMessage.EventEmitter.emit (events.js:117:20)
+77 error     at _stream_readable.js:920:16
+77 error     at process._tickCallback (node.js:415:13)
+78 error If you need help, you may report this *entire* log,
+78 error including the npm and node versions, at:
+78 error     <http://github.com/npm/npm/issues>
+79 error System Darwin 12.4.1
+80 error command "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+81 error cwd /Users/david/Projects/ainojs-react-touchclick
+82 error node -v v0.10.26
+83 error npm -v 1.4.3
+84 verbose exit [ 1, true ]
