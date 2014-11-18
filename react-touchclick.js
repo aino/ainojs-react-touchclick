@@ -41,11 +41,9 @@ module.exports = React.createClass({
   },
 
   clearEventBus: function() {
-    if ( !this.isMounted() )
-      return
     this.clickTimer && clearTimeout(this.clickTimer)
     this.clickTimer = setTimeout(function() {
-      this.setState({canClick: true})
+      this.isMounted() && this.setState({canClick: true})
     }.bind(this), 400)
   },
 
