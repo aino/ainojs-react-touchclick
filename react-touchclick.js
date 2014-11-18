@@ -19,8 +19,7 @@ module.exports = React.createClass({
       touched: false,
       touchdown: false,
       coords: { x:0, y:0 },
-      evObj: {},
-      canClick: false
+      evObj: {}
     }
   },
 
@@ -40,12 +39,18 @@ module.exports = React.createClass({
     }
   },
 
+<<<<<<< HEAD
   clearEventBus: function() {
     if ( !this.isMounted() )
       return
+=======
+  componentDidMount: function() {
+    // delay the click listener to clear leftovers in the event bus
+    this.setState({canClick: false})
+>>>>>>> e134671c6b72744b181ca794cc58940f00c81146
     this.clickTimer && clearTimeout(this.clickTimer)
     this.clickTimer = setTimeout(function() {
-      this.setState({canClick: true})
+      this.isMounted() && this.setState({canClick: true})
     }.bind(this), 400)
   },
 
@@ -71,7 +76,7 @@ module.exports = React.createClass({
       Math.abs(this.state.coords.y - coords.y) 
     )
     if ( distance > 6 ) {
-      this.state.touchdown && this.trigger('cancel', e)
+      this.state.touchdown && this.trigger('up', e)
       this.setState({ touchdown: false })
     }
   },
