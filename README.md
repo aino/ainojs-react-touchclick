@@ -11,7 +11,9 @@ Usage:
 
 Props:
 
-- click - click handler
-- down -  touchdown/mousedown handler
-- up - touchend/mouseup handler
-- nodeName - nodeName of the surrounding node (default: DIV)
+- **click** - click handler
+- **down** -  touchdown/mousedown handler
+- **up** - touchend/mouseup handler
+- **nodeName** - nodeName of the surrounding node (default: DIV)
+- **className** - className of the node
+- **href** - href attribute
